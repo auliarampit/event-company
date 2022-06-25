@@ -660,7 +660,6 @@
             gap-6
             sm:gap-6
             px-4
-            sm:px-48
           "
         >
           <div
