@@ -357,6 +357,6 @@
 
 <script>
 export default {
-  name: "StepContent",
+  name: "Amazon",
 };
 </script>

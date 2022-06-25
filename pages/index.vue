@@ -1,7 +1,8 @@
 <template>
   <div class="w-full h-full">
     <Banner />
-    <StepContent />
+    <Amazon />
+    <Learn />
   </div>
 </template>
 
