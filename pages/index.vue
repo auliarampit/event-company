@@ -510,63 +510,11 @@
         </div>
 
         <div class="py-5 grid grid-cols-2 sm:grid-cols-4 gap-2">
-          <div class="w-8/12 sm:w-3/5 mx-auto">
-            <img
-              src="https://storage.caribarang.id/banners/8a76eaed-1857-4959-b460-74767e6b10fa.png"
-              alt=""
-              class="w-full"
-            />
-            <p class="text-base font-bold sm:text-xl text-center pt-3 pb-2">
-              Cara berjualan di berbagai negara melalui marketplace Amazon
-            </p>
-            <p class="text-white italic text-base text-center sm:text-lg">
-              (How to sell in worldwide market with Amazon)
-            </p>
-          </div>
-          <div class="w-8/12 sm:w-3/5 mx-auto">
-            <img
-              src="https://caribarang.oss-ap-southeast-1.aliyuncs.com/general/lp/icon%202.png"
-              alt=""
-              class="w-full"
-            />
-            <p class="text-base font-bold sm:text-xl text-center pt-3 pb-2">
-              Cara menemukan produk yang laku untuk di jual
-            </p>
-            <p class="text-white italic text-base text-center sm:text-lg">
-              (How to find high demand products to sell)
-            </p>
-          </div>
-          <div class="w-8/12 sm:w-3/5 mx-auto">
-            <img
-              src="https://caribarang.oss-ap-southeast-1.aliyuncs.com/events/icon-3.png"
-              alt=""
-              class="w-11/12"
-            />
-            <p class="text-base font-bold sm:text-xl text-center pt-3 pb-2">
-              Cara meningkatkan kunjungan calon pembeli ke marketplace toko kamu
-            </p>
-            <p class="text-white italic text-base text-center sm:text-lg">
-              (How to increase your online store traffic)
-            </p>
-          </div>
-          <div class="w-8/12 sm:w-3/5 mx-auto">
-            <img
-              src="https://caribarang.oss-ap-southeast-1.aliyuncs.com/events/icon-4.png"
-              alt=""
-              class="w-full"
-            />
-            <p class="text-base font-bold sm:text-xl text-center pt-3 pb-2">
-              Tips dan trik berjualan online dipasar luar negeri
-            </p>
-            <p class="text-white italic text-base text-center sm:text-lg">
-              (Amazon online store tips and tricks)
-            </p>
-          </div>
+          <Learn v-for="data of learnData" :key="data.id" :data="data" />
         </div>
 
         <div class="py-5 text-center">
-          <a
-            href="#"
+          <button
             class="
               text-white
               border border-white
@@ -589,7 +537,7 @@
             "
           >
             Register Now
-          </a>
+          </button>
         </div>
       </div>
     </div>
@@ -1098,12 +1046,14 @@
 <script lang="ts">
 import Vue from "vue";
 import ScheduleDummy from "@/data/ScheduleDummy";
+import LearnDummy from "@/data/LearnDummy";
 
 export default Vue.extend({
   name: "IndexPage",
   data() {
     return {
       scheduleData: ScheduleDummy,
+      learnData: LearnDummy,
     };
   },
 });

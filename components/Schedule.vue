@@ -9,14 +9,14 @@
       w-ful
     "
   >
-    <span class="text-red-600 sm:text-2xl">Tuesday</span>
-    <span class="text-gray-800 text-sm sm:text-3xl"><strong>28</strong></span>
-    <span class="mt-0 sm:mt-2 text-gray-500 text-sm sm:text-sm">June 2022</span>
+    <span class="text-red-600 sm:text-2xl">{{data.day}}</span>
+    <span class="text-gray-800 text-sm sm:text-3xl"><strong>{{data.date.slice(0, 2)}}</strong></span>
+    <span class="mt-0 sm:mt-2 text-gray-500 text-sm sm:text-sm">{{data.date.slice(2)}}</span>
     <span class="mt-0 sm:mt-2 font-bold text-sm sm:text-sm"
-      >14.00 - 17.00 WIB</span
+      >{{data.time}}</span
     >
     <span class="mt-0 sm:mt-2 text-gray-700 text-sm sm:text-sm"
-      >Hotel Aston Kemayoran</span
+      >{{data.name}}</span
     >
   </div>
 </template>
@@ -24,5 +24,8 @@
 <script>
 export default {
   name: "Schedule",
+  props: [
+    "data"
+  ]
 };
 </script>
