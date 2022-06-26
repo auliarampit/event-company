@@ -6,7 +6,6 @@
       justify-center
       items-center
       flex flex-col
-      w-ful
     "
   >
     <span class="text-red-600 sm:text-2xl">{{data.day}}</span>
